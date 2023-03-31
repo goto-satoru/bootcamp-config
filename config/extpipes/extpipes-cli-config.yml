@@ -1,12 +1,9 @@
 ---
 # follows the same parameter structure as the DB extractor configuration
 cognite: # kwargs to pass to the CogniteClient, Environment variable format: ${ENVIRONMENT_VARIABLE}
-  # host: https://${EXTPIPES_CDF_CLUSTER}.cognitedata.com/
+# host: https://${EXTPIPES_CDF_CLUSTER}.cognitedata.com/
     host: ${EXTPIPES_CDF_HOST}
     project: ${EXTPIPES_CDF_PROJECT}
-  #
-  # AAD IdP login credentials:
-  #
     idp-authentication:
         client-id: ${EXTPIPES_IDP_CLIENT_ID}
         secret: ${EXTPIPES_IDP_CLIENT_SECRET}
@@ -28,22 +25,8 @@ extpipe-pattern: '{source}:{short-name}:{rawtable-name}:{suffix}'
 default-contacts:
     - name: GOTO Satoru
       email: satoru.goto@cognite.com
-      role: Princial Soluation Architect
+      role: Principal Solution Architect
       send-notification: true
-
-    - rawdb-name: src:001:sap:db
-      dataset-external-id: src:001:sap:ds
-      short-name: sap
-      rawtables:
-          - rawtable-name: assets
-            pipelines:
-                - source: csv
-                  schedule: On trigger
-                  contacts:
-                      - name: GOTO Satoru
-                        email: satoru.goto@cognite.com
-                        role: Bootcamp 73 Administrator
-                        send-notification: false
 
 rawdbs:
     - rawdb-name: src:001:sap:db
