@@ -55,7 +55,7 @@ rawdbs:
                 - source: csv
                   schedule: On trigger
                   contacts:
-                      - name: [Contact name]
-                        email: [Contact e-mail]
-                        role: Bootcamp <n> Administrator
+                      - name: GOTO Satoru
+                        email: satoru.goto@cognite.com
+                        role: Bootcamp 73 Administrator
                         send-notification: false
